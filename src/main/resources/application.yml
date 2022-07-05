@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/datajpa
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        #show_sql: true #???? 8?
+        format_sql: true #???? 8?
+        default_batch_fetch_size: 100
+    #OSIV? ? ?? lazy ??? @Transactional? ??? Service?? ?????
+    open-in-view: false
+
+logging.level: #???? ??
+  org.hibernate.SQL: debug #???? 2?
+  org:
+    hibernate:
+      type: trace
